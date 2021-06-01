@@ -7,21 +7,22 @@ body {
 }
 
 body, .app {
-  background: white;
+  background-color: lightgrey;
 }
 
 /* main page */
 
 .list-books-title {
-  padding: 10px 0;
-  background: #2e7c31;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+  background-color: white;
   text-align: center;
+  padding: 1px 0 4px;
 }
 
 .list-books-title h1 {
   font-weight: 400;
   margin: 0;
-  color: white;
+  color: black;
 }
 
 .list-books-content {
@@ -40,7 +41,8 @@ body, .app {
 }
 
 .bookshelf-title {
-  border-bottom: 1px solid #dedede;
+  background-color: white;
+  max-width: 220px;
 }
 
 .bookshelf-books {
@@ -103,7 +105,7 @@ body, .app {
   top: 20px;
   left: 15px;
   width: 50px;
-  height: 53px;
+  height: 54px;
   background-image: url('./icons/arrow-back.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -195,4 +197,25 @@ button:active {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+.icon {
+  position: fixed;
+  background-color: lightgrey;
+  width: 50px;
+  height: 54px;
+  background-image: url('./icons/add.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  font-size: 0;
+  outline: none;
+}
+
+.reset {
+  background-color: red;
+  width: 50px;
+  height: 54px;
+  color: white;
+  border: none;
 }

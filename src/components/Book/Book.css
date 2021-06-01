@@ -1,0 +1,21 @@
+.bookWrapper {
+    margin: 0 20px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+.meta {
+    max-width: 148px;
+    font-size: 12px;
+}
+
+img {
+    height: 200px;
+    margin-bottom: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border: 1px solid dimgray;
+}

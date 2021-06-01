@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-bottom: 40px;
+}
+
+.shelfWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 800px;
+    background-color: white;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 20px 0;
+}
+
+h2 {
+    margin: 20px 0 0;
+    padding-left: 10px;
+}
