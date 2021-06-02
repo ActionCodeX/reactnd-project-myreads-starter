@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import * as BooksAPI from '../../BooksAPI';
 import {Link} from 'react-router-dom';
 import Book from '../Book/Book';
+import MissingCover from '../../icons/missing-cover.jpg';
 
 type Props = {
     library: Array<{title: string, author: string, imageLinks: {thumbnail: string}, shelf: string}>,
@@ -27,6 +28,9 @@ class Search extends Component<Props> {
                     this.setState({searchResults: books})
                 }
             })
+        }
+        if (!query) {
+            this.setState({searchResults: []})
         }
 
     }
@@ -57,7 +61,7 @@ class Search extends Component<Props> {
                         {searchResults.map(searchResult => {
                             const shelf = library.filter(book => book.title === searchResult.title);
                             const shelfLocation = shelf.length > 0 ? shelf[0].shelf : '';
-                            return  <Book id={searchResult.id} moveBook={moveBook} authors={searchResult.authors} title={searchResult.title} url={searchResult.imageLinks.thumbnail} shelf={shelfLocation} key={searchResult.title} />
+                            return  <Book id={searchResult.id} moveBook={moveBook} authors={searchResult.authors || 'No author found'} title={searchResult.title} url={searchResult.imageLinks ? searchResult.imageLinks.thumbnail : MissingCover} shelf={shelfLocation} key={searchResult.title} />
                         })}
                     </ol>
                 </div>
